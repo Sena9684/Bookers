@@ -1,0 +1,6 @@
+<%= form_for(@books, url: book_path) do |f| %>
+<% if @books.errors.any? %>
+<%= @books.errors.count %>件のエラー
+<% @books.errors.full_messages.each do |message| %>
+<%= message %>
+<% end %>s
